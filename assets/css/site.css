@@ -22,6 +22,7 @@
   --radius: 22px;
   --gutter: clamp(16px, 4vw, 48px);
   --max: 1240px;
+  color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
