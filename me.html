@@ -88,18 +88,122 @@
     </section>
 
     <section class="section" style="padding-top:0" aria-labelledby="skills-h">
-      <div class="wrap split">
-        <div><h2 id="skills-h" class="h2 reveal">Toolkit</h2></div>
-        <div class="skills">
-          <div class="skill reveal">AI &amp; machine learning</div>
-          <div class="skill reveal" style="--i:1">Creative development</div>
-          <div class="skill reveal" style="--i:2">UI / UX design</div>
-          <div class="skill reveal">Web development</div>
-          <div class="skill reveal" style="--i:1">Interactive design</div>
-          <div class="skill reveal" style="--i:2">Motion &amp; Remotion</div>
-          <div class="skill reveal">Claude Code skills</div>
-          <div class="skill reveal" style="--i:1">three.js &amp; WebGL</div>
-          <div class="skill reveal" style="--i:2">Prototyping</div>
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="skills-h" class="h2 reveal">Toolkit</h2>
+          <p class="muted reveal" style="--i:1;max-width:38ch;margin:0">The models, tools and stacks I build with every day, Anthropic first.</p>
+        </div>
+        <div class="filters reveal" role="group" aria-label="Filter toolkit">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="anthropic" aria-pressed="false">Anthropic</button>
+          <button class="chip" type="button" data-filter="google" aria-pressed="false">Google AI</button>
+          <button class="chip" type="button" data-filter="openai" aria-pressed="false">OpenAI</button>
+          <button class="chip" type="button" data-filter="build" aria-pressed="false">Code &amp; build</button>
+          <button class="chip" type="button" data-filter="backend" aria-pressed="false">Backend &amp; APIs</button>
+          <button class="chip" type="button" data-filter="automation" aria-pressed="false">Automation</button>
+          <button class="chip" type="button" data-filter="media" aria-pressed="false">Generative media</button>
+          <button class="chip" type="button" data-filter="av" aria-pressed="false">Video &amp; audio</button>
+          <button class="chip" type="button" data-filter="design" aria-pressed="false">Design</button>
+        </div>
+        <div class="tool-groups">
+          <div class="tool-group reveal" data-cat="anthropic">
+            <h3 class="eyebrow">Anthropic <span class="muted">· 8</span></h3>
+            <ul class="tools">
+              <li class="tool"><b>Claude Opus 4.8</b><span>Frontier reasoning</span></li>
+              <li class="tool"><b>Claude Opus 4.7</b><span>Frontier reasoning</span></li>
+              <li class="tool"><b>Claude Sonnet 4.6</b><span>Balanced intelligence</span></li>
+              <li class="tool"><b>Claude Code</b><span>AI coding agent</span></li>
+              <li class="tool"><b>Claude Design</b><span>Visual prototyping</span></li>
+              <li class="tool"><b>Claude Cowork</b><span>Agentic workspace</span></li>
+              <li class="tool"><b>Claude Skills</b><span>Reusable automations</span></li>
+              <li class="tool"><b>Anthropic API</b><span>Claude integration</span></li>
+            </ul>
+          </div>
+          <div class="tool-group reveal" data-cat="google">
+            <h3 class="eyebrow">Google AI <span class="muted">· 13</span></h3>
+            <ul class="tools">
+              <li class="tool"><b>Gemini 3.5 Flash</b><span>Frontier agentic model</span></li>
+              <li class="tool"><b>Gemini Omni</b><span>Multimodal creation</span></li>
+              <li class="tool"><b>Google AI Studio</b><span>Prompt engineering IDE</span></li>
+              <li class="tool"><b>Antigravity 2.0</b><span>Agent development platform</span></li>
+              <li class="tool"><b>Google Pics</b><span>AI image generation</span></li>
+              <li class="tool"><b>Gemini Spark</b><span>Personal AI agent</span></li>
+              <li class="tool"><b>NotebookLM</b><span>AI research assistant</span></li>
+              <li class="tool"><b>Google Workspace Studio</b><span>Enterprise AI integration</span></li>
+              <li class="tool"><b>Stitch</b><span>AI integration tool</span></li>
+              <li class="tool"><b>Pomelli</b><span>AI design tool</span></li>
+              <li class="tool"><b>Google VEO 3</b><span>Video generation</span></li>
+              <li class="tool"><b>Nano Banana 2</b><span>Image generation</span></li>
+              <li class="tool"><b>MusicFX</b><span>AI music generation</span></li>
+            </ul>
+          </div>
+          <div class="tool-group reveal" data-cat="openai">
+            <h3 class="eyebrow">OpenAI <span class="muted">· 2</span></h3>
+            <ul class="tools">
+              <li class="tool"><b>GPT-5.5</b><span>Default ChatGPT model</span></li>
+              <li class="tool"><b>Codex</b><span>AI code agent</span></li>
+            </ul>
+          </div>
+          <div class="tool-group reveal" data-cat="build">
+            <h3 class="eyebrow">Code &amp; build <span class="muted">· 10</span></h3>
+            <ul class="tools">
+              <li class="tool"><b>React</b><span>Frontend framework</span></li>
+              <li class="tool"><b>Next.js</b><span>Full-stack framework</span></li>
+              <li class="tool"><b>TypeScript</b><span>Type-safe JS</span></li>
+              <li class="tool"><b>Python</b><span>ML &amp; backend</span></li>
+              <li class="tool"><b>Node.js</b><span>Server runtime</span></li>
+              <li class="tool"><b>Tailwind CSS</b><span>Utility styling</span></li>
+              <li class="tool"><b>VS Code</b><span>Code editor</span></li>
+              <li class="tool"><b>GitHub Copilot</b><span>AI pair programmer</span></li>
+              <li class="tool"><b>Cursor</b><span>AI code editor</span></li>
+              <li class="tool"><b>Lovable</b><span>AI app builder</span></li>
+            </ul>
+          </div>
+          <div class="tool-group reveal" data-cat="backend">
+            <h3 class="eyebrow">Backend &amp; APIs <span class="muted">· 4</span></h3>
+            <ul class="tools">
+              <li class="tool"><b>Supabase</b><span>Backend-as-a-service</span></li>
+              <li class="tool"><b>Vercel</b><span>Deployment &amp; edge</span></li>
+              <li class="tool"><b>REST APIs</b><span>Data integration</span></li>
+              <li class="tool"><b>GraphQL</b><span>Query language</span></li>
+            </ul>
+          </div>
+          <div class="tool-group reveal" data-cat="automation">
+            <h3 class="eyebrow">Automation <span class="muted">· 2</span></h3>
+            <ul class="tools">
+              <li class="tool"><b>n8n</b><span>Workflow automation</span></li>
+              <li class="tool"><b>Zapier</b><span>App integrations</span></li>
+            </ul>
+          </div>
+          <div class="tool-group reveal" data-cat="media">
+            <h3 class="eyebrow">Generative media <span class="muted">· 8</span></h3>
+            <ul class="tools">
+              <li class="tool"><b>Midjourney V8.1</b><span>AI image generation</span></li>
+              <li class="tool"><b>ComfyUI</b><span>Node-based image gen</span></li>
+              <li class="tool"><b>ElevenLabs</b><span>Voice AI &amp; TTS</span></li>
+              <li class="tool"><b>Suno v5.5</b><span>AI music generation</span></li>
+              <li class="tool"><b>Adobe Firefly</b><span>Creative AI suite</span></li>
+              <li class="tool"><b>Arcads.ai</b><span>AI video ads</span></li>
+              <li class="tool"><b>Captions.ai</b><span>Video editing AI</span></li>
+              <li class="tool"><b>Topaz Labs</b><span>AI media enhancement</span></li>
+            </ul>
+          </div>
+          <div class="tool-group reveal" data-cat="av">
+            <h3 class="eyebrow">Video &amp; audio <span class="muted">· 4</span></h3>
+            <ul class="tools">
+              <li class="tool"><b>Adobe Premiere Pro</b><span>Video editing</span></li>
+              <li class="tool"><b>DaVinci Resolve</b><span>Color &amp; edit suite</span></li>
+              <li class="tool"><b>Logic Pro X</b><span>Music production</span></li>
+              <li class="tool"><b>Ableton Live</b><span>Music production &amp; performance</span></li>
+            </ul>
+          </div>
+          <div class="tool-group reveal" data-cat="design">
+            <h3 class="eyebrow">Design <span class="muted">· 2</span></h3>
+            <ul class="tools">
+              <li class="tool"><b>Figma</b><span>UI/UX design</span></li>
+              <li class="tool"><b>Adobe Creative Suite</b><span>Creative production</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -109,6 +213,7 @@
         <h2 id="cta-h" class="display reveal">Let's <span class="grad-text">talk.</span></h2>
         <div class="cta-actions reveal" style="--i:1">
           <a class="btn btn-grad" href="https://www.linkedin.com/in/estebantobon" target="_blank" rel="noopener">Message on LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn" href="mailto:xbancho@gmail.com">xbancho@gmail.com</a>
         </div>
       </div>
     </section>
@@ -125,5 +230,6 @@
   </footer>
 
   <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/me.js" defer></script>
 </body>
 </html>
