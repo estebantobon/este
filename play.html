@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Play · Esteban Tobón</title>
+  <meta name="description" content="Research and experiments with Google Gemini, turned into imagery.">
+  <meta name="theme-color" content="#0E0E0E">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Primary">
+    <a class="nav-mark" href="./" aria-label="Esteban Tobón, home">ET</a>
+    <ul class="nav-links">
+      <li class="nav-pill" aria-hidden="true"></li>
+      <li><a href="./">Index</a></li>
+      <li><a href="play.html" aria-current="page">Play</a></li>
+      <li><a href="me.html">Me</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="orb orb-a" data-speed="-0.25" aria-hidden="true"></div>
+      <div class="orb orb-b" data-speed="0.15" aria-hidden="true"></div>
+      <div class="orb orb-c" data-speed="-0.4" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow reveal"><span class="dot"></span>&nbsp; Play</p>
+        <h1 class="display reveal" style="--i:1;margin-top:18px">Research,<br><span class="grad-text">made visible.</span></h1>
+        <p class="lead reveal" style="--i:2;margin-top:28px">Questions I've explored with Google Gemini, turned into images. Part research log, part sketchbook.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:0" aria-labelledby="gal-h">
+      <div class="wrap">
+        <h2 id="gal-h" class="sr-only">Gallery</h2>
+        <div class="filters reveal" role="group" aria-label="Filter gallery">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="research" aria-pressed="false">Research</button>
+          <button class="chip" type="button" data-filter="visuals" aria-pressed="false">Visuals</button>
+          <button class="chip" type="button" data-filter="experiments" aria-pressed="false">Experiments</button>
+        </div>
+        <p class="sr-only" aria-live="polite" id="filter-status"></p>
+
+        <!-- Placeholder tiles. To add real work: replace <div class="art"> with
+             <img src="assets/play/xx.jpg" alt="..."> and set data-title / data-desc. -->
+        <div class="gallery">
+          <button class="tile reveal" type="button" data-cat="research" style="--h:210;--ar:4 / 5;--i:0" data-title="Study 01" data-desc="Research · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 01</b><span>Research</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="visuals" style="--h:260;--ar:1 / 1;--i:1" data-title="Study 02" data-desc="Visuals · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art v2" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 02</b><span>Visuals</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="experiments" style="--h:300;--ar:4 / 5;--i:2" data-title="Study 03" data-desc="Experiments · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art v3" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 03</b><span>Experiments</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="visuals" style="--h:330;--ar:3 / 4;--i:0" data-title="Study 04" data-desc="Visuals · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 04</b><span>Visuals</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="research" style="--h:190;--ar:1 / 1;--i:1" data-title="Study 05" data-desc="Research · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art v3" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 05</b><span>Research</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="experiments" style="--h:240;--ar:4 / 5;--i:2" data-title="Study 06" data-desc="Experiments · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art v2" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 06</b><span>Experiments</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="research" style="--h:280;--ar:3 / 4;--i:0" data-title="Study 07" data-desc="Research · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art v2" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 07</b><span>Research</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="visuals" style="--h:200;--ar:4 / 5;--i:1" data-title="Study 08" data-desc="Visuals · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art v3" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 08</b><span>Visuals</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="experiments" style="--h:350;--ar:1 / 1;--i:2" data-title="Study 09" data-desc="Experiments · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 09</b><span>Experiments</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="visuals" style="--h:225;--ar:4 / 5;--i:0" data-title="Study 10" data-desc="Visuals · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art v2" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 10</b><span>Visuals</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="research" style="--h:310;--ar:1 / 1;--i:1" data-title="Study 11" data-desc="Research · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 11</b><span>Research</span></div>
+          </button>
+          <button class="tile reveal" type="button" data-cat="experiments" style="--h:180;--ar:3 / 4;--i:2" data-title="Study 12" data-desc="Experiments · placeholder, replace with Gemini work">
+            <div class="tile-art"><div class="art v3" aria-hidden="true"></div></div>
+            <div class="tile-meta"><b>Study 12</b><span>Experiments</span></div>
+          </button>
+        </div>
+        <p class="placeholder-note">Placeholder artwork. Real Gemini research images go here.</p>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" aria-labelledby="lb-title">
+    <div class="lb-art"></div>
+    <div class="lb-bar">
+      <div><h2 id="lb-title"></h2><p id="lb-desc"></p></div>
+      <div class="lb-ctrls">
+        <button class="icon-btn" type="button" data-lb="prev" aria-label="Previous">←</button>
+        <button class="icon-btn" type="button" data-lb="next" aria-label="Next">→</button>
+        <button class="icon-btn" type="button" data-lb="close" aria-label="Close">✕</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© <span data-year>2026</span> Esteban Tobón</span>
+      <ul>
+        <li><a href="./">Index</a></li><li><a href="play.html">Play</a></li><li><a href="me.html">Me</a></li>
+        <li><a href="https://github.com/estebantobon" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/play.js" defer></script>
+</body>
+</html>
