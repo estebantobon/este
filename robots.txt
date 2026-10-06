@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://estebantobon.dev/sitemap.xml
