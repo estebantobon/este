@@ -38,8 +38,10 @@
       <div class="wrap me-hero">
         <div data-speed="0.05">
           <figure class="portrait reveal" style="margin:0">
-            <!-- Replace this placeholder with: <img src="assets/me/esteban.jpg" alt="Portrait of Esteban Tobón"> -->
-            <div class="portrait-ph"><div><b>ET</b>Photo coming soon</div></div>
+            <picture>
+              <source type="image/webp" srcset="assets/me/esteban-640.webp 640w, assets/me/esteban-1000.webp 1000w" sizes="(max-width: 960px) 92vw, 460px">
+              <img src="assets/me/esteban-1000.jpg" srcset="assets/me/esteban-640.jpg 640w, assets/me/esteban-1000.jpg 1000w" sizes="(max-width: 960px) 92vw, 460px" width="1000" height="1250" alt="Portrait of Esteban Tobón in a dark blazer and light blue shirt, standing in a bright office hallway." fetchpriority="high">
+            </picture>
           </figure>
         </div>
         <div>

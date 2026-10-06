@@ -19,7 +19,7 @@ Personal site. Plain static HTML, CSS and JS, no build step. Deploys as-is on Ve
 `assets/js/hero.js` is a canvas port of the `ParticleForm` template from [motion-studio](https://github.com/estebantobon/motion-studio): seeded particles assemble into a sphere, then morph ring → helix → "ET" as you scroll, with spring physics and pointer repulsion.
 
 ## Placeholders to replace
-- `me.html`: portrait (`assets/me/esteban.jpg`), resume PDF (`assets/Esteban-Tobon-Resume.pdf`), LinkedIn URL, earlier roles
+- `me.html`: resume PDF (`assets/Esteban-Tobon-Resume.pdf`), LinkedIn URL, earlier roles
 - `play.html`: the 12 generated tiles; swap each `.art` div for an `<img>`
 - `index.html`: project screenshots (put an `<img>` inside `.card-art`), descriptions marked `TODO(Esteban)`, URLs for Peptide Balance and New Wave
 
