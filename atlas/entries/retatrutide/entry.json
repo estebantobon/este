@@ -1,0 +1,48 @@
+{
+  "slug": "retatrutide",
+  "title": "Retatrutide: a tactical manual for fat loss",
+  "topic": "fat-loss",
+  "image": "assets/atlas/retatrutide.webp",
+  "made_with": "NotebookLM",
+  "sources": [{ "title": "TODO(Esteban): source video title", "url": "" }],
+  "claims": [
+    {
+      "text": "Activates three receptors (GLP-1, GIP, glucagon) to suppress hunger and increase fat burning.",
+      "grade": "A",
+      "verdict": "holds",
+      "note": "That is the drug's designed mechanism, and randomized trials confirm large appetite and weight effects."
+    },
+    {
+      "text": "Average body weight loss of 24%+, beating semaglutide (10-15%) and tirzepatide (~20%).",
+      "grade": "A",
+      "verdict": "holds",
+      "note": "In the phase 2 trial, the top dose (12 mg) produced a 24.2% mean loss at 48 weeks. The comparison crosses separate trials with different lengths and populations, so treat it as directional.",
+      "refs": [
+        { "label": "Jastreboff et al., NEJM 2023 (phase 2)", "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2301972" },
+        { "label": "STEP 1, NEJM 2021 (semaglutide 14.9% at 68 wks)" },
+        { "label": "SURMOUNT-1, NEJM 2022 (tirzepatide up to 20.9% at 72 wks)" }
+      ]
+    },
+    {
+      "text": "Titrate 0.5 → 1.5 → 3.0 → 4.5 mg over 13+ weeks.",
+      "grade": "D",
+      "verdict": "unsupported",
+      "note": "This is not the trial schedule. Trials escalated toward 4, 8 and 12 mg under medical supervision. These doses come from the online community, and retatrutide is still investigational and not approved.",
+      "refs": [{ "label": "Jastreboff et al., NEJM 2023, dosing arms" }]
+    },
+    {
+      "text": "When you cut calories, your body raises hunger hormones and lowers energy to defend fat stores.",
+      "grade": "A",
+      "verdict": "holds",
+      "note": "Metabolic adaptation and higher ghrelin after weight loss are well replicated in human studies.",
+      "refs": [{ "label": "Sumithran et al., NEJM 2011" }]
+    },
+    {
+      "text": "Calorie ceiling = body weight (lb) x 12; protein floor = 1 g per lb.",
+      "grade": "D",
+      "verdict": "overstated",
+      "note": "These are coaching rules of thumb, not outputs of a trial. Protein targets around 0.7 to 1 g per lb are common in sports nutrition."
+    }
+  ],
+  "status": "draft"
+}

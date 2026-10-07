@@ -1,0 +1,220 @@
+{
+  "generated": "2026-10-07",
+  "totals": {
+    "entries": 3,
+    "claims": 16,
+    "holds": 9,
+    "overstated": 3,
+    "unsupported": 4
+  },
+  "entries": [
+    {
+      "slug": "bpc-157",
+      "title": "BPC-157: the \"forever peptide\"",
+      "topic": "peptides",
+      "image": "assets/atlas/bpc-157.webp",
+      "made_with": "NotebookLM",
+      "sources": [
+        {
+          "title": "TODO(Esteban): source video title",
+          "url": ""
+        }
+      ],
+      "claims": [
+        {
+          "text": "Builds new blood vessels to speed healing (angiogenesis).",
+          "grade": "C",
+          "verdict": "overstated",
+          "note": "Rat and cell studies show increased blood vessel growth around injuries. No human study has measured it.",
+          "refs": [
+            {
+              "label": "Seiwerth et al., review of BPC-157 in wound healing (animal data)"
+            }
+          ]
+        },
+        {
+          "text": "Rebuilds tendon, bone and skin stronger than before.",
+          "grade": "C",
+          "verdict": "overstated",
+          "note": "Tendon and ligament repair is well documented in rats. \"Stronger than before\" has no support in any species.",
+          "refs": [
+            {
+              "label": "Chang et al. 2011, tendon fibroblast outgrowth (rat cells)"
+            }
+          ]
+        },
+        {
+          "text": "Crosses the blood-brain barrier and acts as \"neurological rehab\".",
+          "grade": "C",
+          "verdict": "unsupported",
+          "note": "Brain effects come from rodent models. There is no human neurological data."
+        },
+        {
+          "text": "Research shows BPC-157 can be anti-tumor.",
+          "grade": "C",
+          "verdict": "unsupported",
+          "note": "This rests on a few cell and rodent studies. Because BPC-157 promotes blood vessel growth, some researchers raise the opposite concern. Neither direction has been tested in people."
+        },
+        {
+          "text": "The cancer fear is based on flawed logic.",
+          "grade": "D",
+          "verdict": "unsupported",
+          "note": "This is an argument, not a finding. Long-term human safety data does not exist, so neither side is settled."
+        },
+        {
+          "text": "Context the infographic leaves out: regulatory status.",
+          "grade": "A",
+          "verdict": "holds",
+          "note": "BPC-157 is not FDA approved. FDA has flagged it as a compounding substance with safety concerns, and WADA bans it in sport. Human evidence is limited to small uncontrolled reports.",
+          "refs": [
+            {
+              "label": "FDA bulk drug substances list, Category 2 (2023)"
+            },
+            {
+              "label": "WADA Prohibited List, S0"
+            }
+          ]
+        }
+      ],
+      "status": "draft",
+      "has_notes": false
+    },
+    {
+      "slug": "retatrutide",
+      "title": "Retatrutide: a tactical manual for fat loss",
+      "topic": "fat-loss",
+      "image": "assets/atlas/retatrutide.webp",
+      "made_with": "NotebookLM",
+      "sources": [
+        {
+          "title": "TODO(Esteban): source video title",
+          "url": ""
+        }
+      ],
+      "claims": [
+        {
+          "text": "Activates three receptors (GLP-1, GIP, glucagon) to suppress hunger and increase fat burning.",
+          "grade": "A",
+          "verdict": "holds",
+          "note": "That is the drug's designed mechanism, and randomized trials confirm large appetite and weight effects."
+        },
+        {
+          "text": "Average body weight loss of 24%+, beating semaglutide (10-15%) and tirzepatide (~20%).",
+          "grade": "A",
+          "verdict": "holds",
+          "note": "In the phase 2 trial, the top dose (12 mg) produced a 24.2% mean loss at 48 weeks. The comparison crosses separate trials with different lengths and populations, so treat it as directional.",
+          "refs": [
+            {
+              "label": "Jastreboff et al., NEJM 2023 (phase 2)",
+              "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2301972"
+            },
+            {
+              "label": "STEP 1, NEJM 2021 (semaglutide 14.9% at 68 wks)"
+            },
+            {
+              "label": "SURMOUNT-1, NEJM 2022 (tirzepatide up to 20.9% at 72 wks)"
+            }
+          ]
+        },
+        {
+          "text": "Titrate 0.5 → 1.5 → 3.0 → 4.5 mg over 13+ weeks.",
+          "grade": "D",
+          "verdict": "unsupported",
+          "note": "This is not the trial schedule. Trials escalated toward 4, 8 and 12 mg under medical supervision. These doses come from the online community, and retatrutide is still investigational and not approved.",
+          "refs": [
+            {
+              "label": "Jastreboff et al., NEJM 2023, dosing arms"
+            }
+          ]
+        },
+        {
+          "text": "When you cut calories, your body raises hunger hormones and lowers energy to defend fat stores.",
+          "grade": "A",
+          "verdict": "holds",
+          "note": "Metabolic adaptation and higher ghrelin after weight loss are well replicated in human studies.",
+          "refs": [
+            {
+              "label": "Sumithran et al., NEJM 2011"
+            }
+          ]
+        },
+        {
+          "text": "Calorie ceiling = body weight (lb) x 12; protein floor = 1 g per lb.",
+          "grade": "D",
+          "verdict": "overstated",
+          "note": "These are coaching rules of thumb, not outputs of a trial. Protein targets around 0.7 to 1 g per lb are common in sports nutrition."
+        }
+      ],
+      "status": "draft",
+      "has_notes": false
+    },
+    {
+      "slug": "trt-timeline",
+      "title": "Your TRT timeline: the first 10 weeks",
+      "topic": "hormones",
+      "image": "assets/atlas/trt-timeline.webp",
+      "made_with": "NotebookLM",
+      "sources": [
+        {
+          "title": "TODO(Esteban): source video title",
+          "url": ""
+        }
+      ],
+      "claims": [
+        {
+          "text": "Weeks 1-4: boosts in mood, confidence, cognition and sex drive.",
+          "grade": "B",
+          "verdict": "holds",
+          "note": "In hypogonadal men, sexual interest improves around week 3 and mood around weeks 3 to 6. Cognitive effects are inconsistent across trials.",
+          "refs": [
+            {
+              "label": "Saad et al., Eur J Endocrinol 2011",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3188848/"
+            }
+          ]
+        },
+        {
+          "text": "After week 4: body composition improves.",
+          "grade": "A",
+          "verdict": "holds",
+          "note": "Lean mass gain and fat loss become measurable around 12 to 16 weeks and keep improving for months.",
+          "refs": [
+            {
+              "label": "Saad et al., Eur J Endocrinol 2011"
+            }
+          ]
+        },
+        {
+          "text": "Libido is not erection quality: TRT raises desire, but erections depend on blood flow.",
+          "grade": "A",
+          "verdict": "holds",
+          "note": "Randomized trials show clear gains in desire and only modest gains in erectile function.",
+          "refs": [
+            {
+              "label": "Testosterone Trials (Snyder et al., NEJM 2016)"
+            }
+          ]
+        },
+        {
+          "text": "Some benefits, like bone density, take a year.",
+          "grade": "A",
+          "verdict": "holds",
+          "note": "Bone density changes show up after about 6 months and keep building for years.",
+          "refs": [
+            {
+              "label": "Snyder et al., JAMA Intern Med 2017 (bone trial)"
+            }
+          ]
+        },
+        {
+          "text": "Context the infographic leaves out: who TRT is for.",
+          "grade": "A",
+          "verdict": "holds",
+          "note": "These timelines come from men with confirmed low testosterone. TRT also suppresses sperm production, which matters for anyone planning children."
+        }
+      ],
+      "status": "draft",
+      "has_notes": false
+    }
+  ]
+}

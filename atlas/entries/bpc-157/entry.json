@@ -1,0 +1,50 @@
+{
+  "slug": "bpc-157",
+  "title": "BPC-157: the \"forever peptide\"",
+  "topic": "peptides",
+  "image": "assets/atlas/bpc-157.webp",
+  "made_with": "NotebookLM",
+  "sources": [{ "title": "TODO(Esteban): source video title", "url": "" }],
+  "claims": [
+    {
+      "text": "Builds new blood vessels to speed healing (angiogenesis).",
+      "grade": "C",
+      "verdict": "overstated",
+      "note": "Rat and cell studies show increased blood vessel growth around injuries. No human study has measured it.",
+      "refs": [{ "label": "Seiwerth et al., review of BPC-157 in wound healing (animal data)" }]
+    },
+    {
+      "text": "Rebuilds tendon, bone and skin stronger than before.",
+      "grade": "C",
+      "verdict": "overstated",
+      "note": "Tendon and ligament repair is well documented in rats. \"Stronger than before\" has no support in any species.",
+      "refs": [{ "label": "Chang et al. 2011, tendon fibroblast outgrowth (rat cells)" }]
+    },
+    {
+      "text": "Crosses the blood-brain barrier and acts as \"neurological rehab\".",
+      "grade": "C",
+      "verdict": "unsupported",
+      "note": "Brain effects come from rodent models. There is no human neurological data."
+    },
+    {
+      "text": "Research shows BPC-157 can be anti-tumor.",
+      "grade": "C",
+      "verdict": "unsupported",
+      "note": "This rests on a few cell and rodent studies. Because BPC-157 promotes blood vessel growth, some researchers raise the opposite concern. Neither direction has been tested in people."
+    },
+    {
+      "text": "The cancer fear is based on flawed logic.",
+      "grade": "D",
+      "verdict": "unsupported",
+      "note": "This is an argument, not a finding. Long-term human safety data does not exist, so neither side is settled."
+    },
+    {
+      "text": "Context the infographic leaves out: regulatory status.",
+      "grade": "A",
+      "verdict": "holds",
+      "note": "BPC-157 is not FDA approved. FDA has flagged it as a compounding substance with safety concerns, and WADA bans it in sport. Human evidence is limited to small uncontrolled reports.",
+      "refs": [{ "label": "FDA bulk drug substances list, Category 2 (2023)" }, { "label": "WADA Prohibited List, S0" }]
+    }
+  ],
+  "status": "draft"
+}

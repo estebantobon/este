@@ -1,0 +1,45 @@
+{
+  "slug": "trt-timeline",
+  "title": "Your TRT timeline: the first 10 weeks",
+  "topic": "hormones",
+  "image": "assets/atlas/trt-timeline.webp",
+  "made_with": "NotebookLM",
+  "sources": [{ "title": "TODO(Esteban): source video title", "url": "" }],
+  "claims": [
+    {
+      "text": "Weeks 1-4: boosts in mood, confidence, cognition and sex drive.",
+      "grade": "B",
+      "verdict": "holds",
+      "note": "In hypogonadal men, sexual interest improves around week 3 and mood around weeks 3 to 6. Cognitive effects are inconsistent across trials.",
+      "refs": [{ "label": "Saad et al., Eur J Endocrinol 2011", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3188848/" }]
+    },
+    {
+      "text": "After week 4: body composition improves.",
+      "grade": "A",
+      "verdict": "holds",
+      "note": "Lean mass gain and fat loss become measurable around 12 to 16 weeks and keep improving for months.",
+      "refs": [{ "label": "Saad et al., Eur J Endocrinol 2011" }]
+    },
+    {
+      "text": "Libido is not erection quality: TRT raises desire, but erections depend on blood flow.",
+      "grade": "A",
+      "verdict": "holds",
+      "note": "Randomized trials show clear gains in desire and only modest gains in erectile function.",
+      "refs": [{ "label": "Testosterone Trials (Snyder et al., NEJM 2016)" }]
+    },
+    {
+      "text": "Some benefits, like bone density, take a year.",
+      "grade": "A",
+      "verdict": "holds",
+      "note": "Bone density changes show up after about 6 months and keep building for years.",
+      "refs": [{ "label": "Snyder et al., JAMA Intern Med 2017 (bone trial)" }]
+    },
+    {
+      "text": "Context the infographic leaves out: who TRT is for.",
+      "grade": "A",
+      "verdict": "holds",
+      "note": "These timelines come from men with confirmed low testosterone. TRT also suppresses sperm production, which matters for anyone planning children."
+    }
+  ],
+  "status": "draft"
+}
