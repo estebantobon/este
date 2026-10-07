@@ -326,7 +326,13 @@ a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
   -webkit-mask-image: radial-gradient(circle at 50% 50%, #000, transparent 75%);
   mask-image: radial-gradient(circle at 50% 50%, #000, transparent 75%);
 }
-.card-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.card-art img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(.8); transition: transform 1s var(--ease-out), filter .6s;
+}
+.card:hover .card-art img { transform: scale(1.04); filter: saturate(1); }
+.card-art.contain img { object-fit: contain; padding: 8% 12%; }
+.card-art:has(img)::before { display: none; }
 .card-art .browser {
   position: absolute; left: 10%; right: 10%; top: 16%; bottom: -12%;
   border-radius: 12px 12px 0 0; background: rgba(14,14,14,.72);
@@ -512,6 +518,7 @@ a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
 @media (max-width: 960px) {
   .flagship, .me-hero, .split { grid-template-columns: 1fr; }
   .card, .card.wide { grid-column: span 6; }
+  .card:last-child:nth-child(odd) { grid-column: span 12; }
 }
 @media (max-width: 640px) {
   body { font-size: 16px; }
