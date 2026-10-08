@@ -1,6 +1,6 @@
 /* Index page extras: showreel play/pause, prompt typing, stat count-up. */
 (() => {
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduced = document.documentElement.classList.contains('reduce-motion');
 
   /* Showreel: play only while visible, honour reduced motion, user can toggle */
   const video = document.getElementById('reel');

@@ -7,7 +7,7 @@
   const canvas = document.getElementById('hero-canvas');
   if (!section || !canvas) return;
   const ctx = canvas.getContext('2d');
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduced = document.documentElement.classList.contains('reduce-motion');
   const chapters = [...section.querySelectorAll('.chapter')];
   const ticks = [...section.querySelectorAll('.hero-progress li')];
   const hint = section.querySelector('.scroll-hint');

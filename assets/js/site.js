@@ -1,7 +1,7 @@
 /* Shared behaviour for every page: pill nav, scroll reveal, parallax,
    cursor glow, card spotlight/tilt, page transitions. No dependencies. */
 (() => {
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduced = document.documentElement.classList.contains('reduce-motion');
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const root = document.documentElement;
 
@@ -131,6 +131,16 @@
       card.addEventListener('pointerleave', () => { card.style.transform = ''; });
     });
   }
+
+  /* ---- Motion toggle in the footer (remembered per visitor) ---- */
+  document.querySelectorAll('.motion-toggle').forEach(btn => {
+    btn.setAttribute('aria-pressed', String(reduced));
+    btn.textContent = reduced ? 'Turn motion on' : 'Reduce motion';
+    btn.addEventListener('click', () => {
+      try { localStorage.setItem('motion', reduced ? 'on' : 'off'); } catch (e) {}
+      location.reload();
+    });
+  });
 
   /* ---- Year in footer ---- */
   document.querySelectorAll('[data-year]').forEach(el => (el.textContent = new Date().getFullYear()));

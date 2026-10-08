@@ -15,7 +15,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <script>document.documentElement.classList.add('js')</script>
+  <script>document.documentElement.classList.add('js');try{if(localStorage.getItem('motion')==='off')document.documentElement.classList.add('reduce-motion')}catch(e){}</script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
@@ -219,6 +219,7 @@
       <ul>
         <li><a href="./">Index</a></li><li><a href="play.html">Play</a></li><li><a href="me.html">Me</a></li>
         <li><a href="https://github.com/estebantobon" target="_blank" rel="noopener">GitHub</a></li>
+        <li><button class="motion-toggle" type="button" aria-pressed="false">Reduce motion</button></li>
       </ul>
     </div>
   </footer>
