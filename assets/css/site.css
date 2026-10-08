@@ -539,3 +539,6 @@ a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
   .hero-stage { position: relative; }
   .glow { display: none; }
 }
+.lightbox:has(img) { width: min(1280px, 94vw); }
+.lb-art:has(img) { aspect-ratio: auto; height: min(74vh, 720px); background: #000; }
+.lb-art img { object-fit: contain; }

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Play · Esteban Tobón</title>
-  <meta name="description" content="Research and experiments with Google Gemini, turned into imagery.">
+  <meta name="description" content="Health and biotech research synthesized with NotebookLM and Gemini, turned into visual explainers.">
   <meta name="theme-color" content="#0E0E0E">
   <meta property="og:title" content="Play · Esteban Tobón">
   <meta property="og:type" content="website">
@@ -38,7 +38,7 @@
       <div class="wrap">
         <p class="eyebrow reveal"><span class="dot"></span>&nbsp; Play</p>
         <h1 class="display reveal" style="--i:1;margin-top:18px">Research,<br><span class="grad-text">made visible.</span></h1>
-        <p class="lead reveal" style="--i:2;margin-top:28px">Questions I've explored with Google Gemini, turned into images. Part research log, part sketchbook.</p>
+        <p class="lead reveal" style="--i:2;margin-top:28px">Health and biotech research I've synthesized with NotebookLM and Gemini, from peptides to hormones to metabolism, turned into visual explainers. Part research log, part sketchbook.</p>
       </div>
     </header>
 
@@ -47,65 +47,54 @@
         <h2 id="gal-h" class="sr-only">Gallery</h2>
         <div class="filters reveal" role="group" aria-label="Filter gallery">
           <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="chip" type="button" data-filter="research" aria-pressed="false">Research</button>
-          <button class="chip" type="button" data-filter="visuals" aria-pressed="false">Visuals</button>
-          <button class="chip" type="button" data-filter="experiments" aria-pressed="false">Experiments</button>
+          <button class="chip" type="button" data-filter="peptides" aria-pressed="false">Peptides &amp; drugs</button>
+          <button class="chip" type="button" data-filter="hormones" aria-pressed="false">Hormones</button>
+          <button class="chip" type="button" data-filter="metabolism" aria-pressed="false">Metabolism</button>
         </div>
         <p class="sr-only" aria-live="polite" id="filter-status"></p>
 
-        <!-- Placeholder tiles. To add real work: replace <div class="art"> with
-             <img src="assets/play/xx.jpg" alt="..."> and set data-title / data-desc. -->
         <div class="gallery">
-          <button class="tile reveal" type="button" data-cat="research" style="--h:210;--ar:4 / 5;--i:0" data-title="Study 01" data-desc="Research · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 01</b><span>Research</span></div>
+          <button class="tile reveal" type="button" data-cat="metabolism" style="--ar:1 / 1;--i:0" data-title="Retatrutide: a total system reset" data-desc="Metabolism · How the triple-agonist trial drug drives weight loss, and what the phase 2 data showed.">
+            <div class="tile-art"><img src="assets/play/retatrutide-system-reset-en.webp" alt="NotebookLM infographic: Retatrutide: a total system reset" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Retatrutide: a total system reset</b><span>Metabolism</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="visuals" style="--h:260;--ar:1 / 1;--i:1" data-title="Study 02" data-desc="Visuals · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art v2" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 02</b><span>Visuals</span></div>
+          <button class="tile reveal" type="button" data-cat="peptides" style="--ar:16 / 9;--i:1" data-title="GHK-Cu: science vs. hype" data-desc="Peptides & drugs · The copper peptide behind skin and hair claims, separated into evidence and marketing.">
+            <div class="tile-art"><img src="assets/play/ghk-cu-science-vs-hype.webp" alt="NotebookLM infographic: GHK-Cu: science vs. hype" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>GHK-Cu: science vs. hype</b><span>Peptides & drugs</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="experiments" style="--h:300;--ar:4 / 5;--i:2" data-title="Study 03" data-desc="Experiments · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art v3" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 03</b><span>Experiments</span></div>
+          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:2" data-title="Growth hormone: facts and myths" data-desc="Hormones · What GH actually does in adults, and which popular claims fall apart.">
+            <div class="tile-art"><img src="assets/play/growth-hormone-facts-myths.webp" alt="NotebookLM infographic: Growth hormone: facts and myths" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Growth hormone: facts and myths</b><span>Hormones</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="visuals" style="--h:330;--ar:3 / 4;--i:0" data-title="Study 04" data-desc="Visuals · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 04</b><span>Visuals</span></div>
+          <button class="tile reveal" type="button" data-cat="peptides" style="--ar:16 / 9;--i:0" data-title="Beyond cholesterol" data-desc="Peptides & drugs · A look at peptides pitched for heart health. Several claims here are ahead of the evidence.">
+            <div class="tile-art"><img src="assets/play/beyond-cholesterol-peptides-heart.webp" alt="NotebookLM infographic: Beyond cholesterol" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Beyond cholesterol</b><span>Peptides & drugs</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="research" style="--h:190;--ar:1 / 1;--i:1" data-title="Study 05" data-desc="Research · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art v3" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 05</b><span>Research</span></div>
+          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:1" data-title="The TRT estrogen blueprint" data-desc="Hormones · Why estrogen matters on testosterone therapy and how it is managed.">
+            <div class="tile-art"><img src="assets/play/trt-estrogen-blueprint.webp" alt="NotebookLM infographic: The TRT estrogen blueprint" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>The TRT estrogen blueprint</b><span>Hormones</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="experiments" style="--h:240;--ar:4 / 5;--i:2" data-title="Study 06" data-desc="Experiments · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art v2" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 06</b><span>Experiments</span></div>
+          <button class="tile reveal" type="button" data-cat="metabolism" style="--ar:1 / 1;--i:2" data-title="Stubborn fat, an advanced guide" data-desc="Metabolism · Why some fat is slower to go, and the levers that move it.">
+            <div class="tile-art"><img src="assets/play/stubborn-fat-advanced-guide.webp" alt="NotebookLM infographic: Stubborn fat, an advanced guide" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Stubborn fat, an advanced guide</b><span>Metabolism</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="research" style="--h:280;--ar:3 / 4;--i:0" data-title="Study 07" data-desc="Research · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art v2" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 07</b><span>Research</span></div>
+          <button class="tile reveal" type="button" data-cat="peptides" style="--ar:16 / 9;--i:0" data-title="Tadalafil, a deep dive" data-desc="Peptides & drugs · Beyond its label: blood flow, prostate and off-label uses.">
+            <div class="tile-art"><img src="assets/play/tadalafil-deep-dive.webp" alt="NotebookLM infographic: Tadalafil, a deep dive" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Tadalafil, a deep dive</b><span>Peptides & drugs</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="visuals" style="--h:200;--ar:4 / 5;--i:1" data-title="Study 08" data-desc="Visuals · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art v3" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 08</b><span>Visuals</span></div>
+          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:1" data-title="Estrogen control on TRT" data-desc="Hormones · Balancing estradiol without crashing it.">
+            <div class="tile-art"><img src="assets/play/estrogen-control-on-trt.webp" alt="NotebookLM infographic: Estrogen control on TRT" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Estrogen control on TRT</b><span>Hormones</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="experiments" style="--h:350;--ar:1 / 1;--i:2" data-title="Study 09" data-desc="Experiments · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 09</b><span>Experiments</span></div>
+          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:2" data-title="A holistic TRT roadmap" data-desc="Hormones · Labs, lifestyle and monitoring before and during therapy.">
+            <div class="tile-art"><img src="assets/play/holistic-trt-roadmap.webp" alt="NotebookLM infographic: A holistic TRT roadmap" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>A holistic TRT roadmap</b><span>Hormones</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="visuals" style="--h:225;--ar:4 / 5;--i:0" data-title="Study 10" data-desc="Visuals · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art v2" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 10</b><span>Visuals</span></div>
-          </button>
-          <button class="tile reveal" type="button" data-cat="research" style="--h:310;--ar:1 / 1;--i:1" data-title="Study 11" data-desc="Research · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 11</b><span>Research</span></div>
-          </button>
-          <button class="tile reveal" type="button" data-cat="experiments" style="--h:180;--ar:3 / 4;--i:2" data-title="Study 12" data-desc="Experiments · placeholder, replace with Gemini work">
-            <div class="tile-art"><div class="art v3" aria-hidden="true"></div></div>
-            <div class="tile-meta"><b>Study 12</b><span>Experiments</span></div>
+          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:0" data-title="The natural foundation" data-desc="Hormones · Dorian Yates on building a natural base before TRT or enhancement.">
+            <div class="tile-art"><img src="assets/play/dorian-yates-natural-foundation.webp" alt="NotebookLM infographic: The natural foundation" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>The natural foundation</b><span>Hormones</span></div>
           </button>
         </div>
-        <p class="placeholder-note">Placeholder artwork. Real Gemini research images go here.</p>
       </div>
     </section>
   </main>
