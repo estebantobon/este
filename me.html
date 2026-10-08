@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <script>document.documentElement.classList.add('js');try{if(localStorage.getItem('motion')==='off')document.documentElement.classList.add('reduce-motion')}catch(e){}</script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/site.css?v=3">
+  <link rel="stylesheet" href="assets/css/site.css?v=4">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -37,10 +37,7 @@
       <div class="wrap me-hero">
         <div data-speed="0.05">
           <figure class="portrait reveal" style="margin:0">
-            <picture>
-              <source type="image/webp" srcset="assets/me/esteban-640.webp 640w, assets/me/esteban-1000.webp 1000w" sizes="(max-width: 960px) 92vw, 460px">
-              <img src="assets/me/esteban-1000.jpg" srcset="assets/me/esteban-640.jpg 640w, assets/me/esteban-1000.jpg 1000w" sizes="(max-width: 960px) 92vw, 460px" width="1000" height="1250" alt="Portrait of Esteban Tobón in a dark blazer and light blue shirt, standing in a bright office hallway." fetchpriority="high">
-            </picture>
+            <img src="assets/me/esteban.jpg" width="1029" height="1528" alt="Portrait of Esteban Tobón in a dark blazer and light blue shirt, standing in a bright office hallway." fetchpriority="high" decoding="async">
           </figure>
         </div>
         <div>
@@ -48,8 +45,7 @@
           <h1 class="display reveal" style="--i:1;margin-top:18px;font-size:clamp(52px,8.5vw,128px)">Hi, I'm<br><span class="grad-text">Esteban.</span></h1>
           <p class="lead reveal" style="--i:2;margin-top:28px">Forward deployed engineer and creative technologist at JPMorgan Chase. I work across AI, design and engineering, and I like shipping things that feel good to use.</p>
           <div class="links-row reveal" style="--i:3">
-            <!-- TODO(Esteban): restore once assets/Esteban-Tobon-Resume.pdf exists:
-            <a class="btn btn-grad" href="assets/Esteban-Tobon-Resume.pdf" download>Download resume <span class="arrow" aria-hidden="true">↓</span></a> -->
+            <a class="btn btn-grad" href="assets/Esteban-Tobon-Resume.pdf" download="Esteban-Tobon-Resume.pdf">Download resume <span class="arrow" aria-hidden="true">↓</span></a>
             <a class="btn" href="https://www.linkedin.com/in/estebantobon" target="_blank" rel="noopener">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
             <a class="btn" href="https://github.com/estebantobon" target="_blank" rel="noopener">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
           </div>
@@ -62,27 +58,61 @@
         <div><h2 id="exp-h" class="h2 reveal">Experience</h2></div>
         <ol class="timeline">
           <li class="reveal">
-            <time>Now</time>
+            <time>Apr 2026 – Present</time>
             <div>
-              <h3>JPMorgan Chase <span class="now">Current</span></h3>
-              <p>Forward Deployed Engineer / Creative Technologist</p>
+              <h3>JPMorganChase <span class="now">Current</span></h3>
+              <p class="role-title">Creative Technologist, AI Transformation · Columbus, OH</p>
+              <p>Define and drive AI strategy for the brand and creative organization. Prototype AI-generated video, motion and imagery with Veo 3, Nano Banana 2, Midjourney and Claude Design, and build Claude Code and Python workflows that plug AI into live creative pipelines. Mentor creative teams and present pilot results to senior leadership.</p>
             </div>
           </li>
           <li class="reveal" style="--i:1">
-            <time>2026</time>
+            <time>Jun 2024 – Feb 2026</time>
             <div>
-              <h3>Motion Studio</h3>
-              <p>Open-source Claude Code skills and a Remotion template pack that turn a brief into a finished 60fps motion graphic.</p>
+              <h3>Blue Phoenix</h3>
+              <p class="role-title">Creative Technologist &amp; IT Manager · Remote</p>
+              <p>Led technical strategy and creative execution for a health and biotech startup across web, UX/UI and SEO. Built integrated systems on WordPress, HubSpot and Klaviyo, AI chatbots and internal tools, and produced generative video, audio and design content.</p>
             </div>
           </li>
           <li class="reveal" style="--i:2">
-            <time>Independent</time>
+            <time>Dec 2022 – Dec 2023</time>
             <div>
-              <h3>Web design &amp; development</h3>
-              <p>Sites and tools for clients in health, finance, gaming, retail and real estate. <a href="./#work" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px">See the work</a>.</p>
+              <h3>Transblue General Contractors</h3>
+              <p class="role-title">UX Designer · Seattle, WA</p>
+              <p>Designed UX flows, wireframes and dashboards for internal tools, and built full-stack features with Python, JavaScript, SQL and REST APIs for construction workflows.</p>
             </div>
           </li>
-          <!-- TODO(Esteban): add earlier roles and education from resume -->
+          <li class="reveal" style="--i:3">
+            <time>Jan 2020 – Jan 2022</time>
+            <div>
+              <h3>Disney</h3>
+              <p class="role-title">Digital Designer · Los Angeles, CA</p>
+              <p>Partnered with streaming teams on content delivery and design workflows across global platforms, and automated media asset processes with Python and internal tooling.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0" aria-labelledby="edu-h">
+      <div class="wrap split">
+        <div><h2 id="edu-h" class="h2 reveal">Education</h2></div>
+        <ol class="timeline">
+          <li class="reveal">
+            <time>2024</time>
+            <div><h3>CS50: Artificial Intelligence with Python</h3><p>HarvardX</p></div>
+          </li>
+          <li class="reveal" style="--i:1">
+            <time>2020</time>
+            <div><h3>UI/UX Design Bootcamp</h3><p>Coursera</p></div>
+          </li>
+          <li class="reveal" style="--i:2">
+            <time>2012 – 2016</time>
+            <div><h3>BA, Communication and Digital Media</h3><p>Seattle Central College</p></div>
+          </li>
+          <li class="reveal" style="--i:3">
+            <time>Languages</time>
+            <div><h3>English, Spanish, Portuguese</h3><p>Native English and Spanish, professional Portuguese</p></div>
+          </li>
         </ol>
       </div>
     </section>
@@ -224,7 +254,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/site.js?v=3" defer></script>
-  <script src="assets/js/me.js?v=3" defer></script>
+  <script src="assets/js/site.js?v=4" defer></script>
+  <script src="assets/js/me.js?v=4" defer></script>
 </body>
 </html>

@@ -1,5 +1,17 @@
-/* Play page: category filters and an accessible lightbox. */
+/* Play page: featured video, category filters and an accessible lightbox. */
 (() => {
+  const feature = document.querySelector('.feature-video video');
+  if (feature && !document.documentElement.classList.contains('reduce-motion') && 'IntersectionObserver' in window) {
+    feature.loop = true;
+    let userPaused = false;
+    feature.addEventListener('pause', () => { if (feature.dataset.auto !== '1') userPaused = true; feature.dataset.auto = ''; });
+    feature.addEventListener('play', () => { userPaused = false; });
+    new IntersectionObserver(([e]) => {
+      if (e.isIntersecting && !userPaused) feature.play().catch(() => {});
+      else if (!e.isIntersecting && !feature.paused) { feature.dataset.auto = '1'; feature.pause(); }
+    }, { threshold: 0.4 }).observe(feature);
+  }
+
   const tiles = [...document.querySelectorAll('.tile')];
   const chips = [...document.querySelectorAll('.chip')];
   const status = document.getElementById('filter-status');

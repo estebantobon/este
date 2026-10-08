@@ -374,7 +374,7 @@ a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
 .footer ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
 
 /* ---------- Page heroes (Play, Me) ---------- */
-.page-hero { padding: clamp(150px, 22vh, 220px) 0 clamp(60px, 8vw, 100px); position: relative; overflow: hidden; }
+.page-hero { padding: clamp(150px, 22vh, 220px) 0 clamp(60px, 8vw, 100px); position: relative; overflow-x: clip; }
 .orb {
   position: absolute; z-index: 0; border-radius: 50%; filter: blur(70px); opacity: .55; pointer-events: none;
 }
@@ -450,7 +450,7 @@ a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
 /* ---------- Me ---------- */
 .me-hero { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
 .portrait {
-  position: relative; aspect-ratio: 4 / 5; border-radius: 30px; overflow: hidden;
+  position: relative; aspect-ratio: 1029 / 1528; border-radius: 30px; overflow: hidden;
   background: var(--bg-raised);
 }
 .portrait::before {
@@ -460,16 +460,8 @@ a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
   -webkit-mask-composite: xor; mask-composite: exclude;
 }
 .portrait picture, .portrait img { display: block; width: 100%; height: 100%; }
-.portrait img { object-fit: cover; object-position: 50% 20%; filter: saturate(.92) contrast(1.04); transition: transform 1.4s var(--ease-out); }
-.portrait:hover img { transform: scale(1.03); }
-.portrait::after {
-  /* tint the bright office backdrop toward the site palette and fade the base into the page */
-  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; border-radius: inherit;
-  background:
-    linear-gradient(to top, rgba(14,14,14,.55) 0%, transparent 32%),
-    linear-gradient(140deg, rgba(168,220,255,.10), rgba(142,92,247,.08) 55%, rgba(244,114,182,.12));
-  mix-blend-mode: normal;
-}
+/* shown exactly as uploaded: no crop, no filter, no tint */
+.portrait img { object-fit: cover; }
 .portrait-ph {
   position: absolute; inset: 0; display: grid; place-items: center; text-align: center;
   background: radial-gradient(circle at 30% 20%, rgba(168,220,255,.35), transparent 50%), radial-gradient(circle at 80% 90%, rgba(244,114,182,.35), transparent 55%), var(--bg-raised);
@@ -487,6 +479,7 @@ a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
 .timeline time { color: var(--muted); font-size: 15px; font-variant-numeric: tabular-nums; }
 .timeline h3 { margin: 0; font-size: 22px; letter-spacing: -.02em; font-weight: 600; }
 .timeline p { margin: 6px 0 0; color: var(--muted); }
+.timeline .role-title { color: var(--fg); opacity: .85; margin-top: 4px; }
 .now { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--fg); margin-left: 10px; vertical-align: middle; }
 .now::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #5BE49B; box-shadow: 0 0 0 0 rgba(91,228,155,.6); animation: ping 2s infinite; }
 @keyframes ping { 70% { box-shadow: 0 0 0 10px rgba(91,228,155,0); } 100% { box-shadow: 0 0 0 0 rgba(91,228,155,0); } }
@@ -544,3 +537,27 @@ a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
 .lightbox:has(img) { width: min(1280px, 94vw); }
 .lb-art:has(img) { aspect-ratio: auto; height: min(74vh, 720px); background: #000; }
 .lb-art img { object-fit: contain; }
+
+/* ---------- Play: featured video ---------- */
+.feature { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.feature-video { position: relative; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: #fff; aspect-ratio: 16 / 9; box-shadow: 0 30px 120px rgba(80,140,255,.18); }
+.feature-video video { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 960px) { .feature { grid-template-columns: 1fr; } }
+
+/* ---------- Brand lockup card art (logo + wordmark) ---------- */
+.card-art.brand-art {
+  display: grid; place-items: center;
+  background:
+    radial-gradient(70% 90% at 20% 20%, rgba(41,204,255,.22), transparent 60%),
+    radial-gradient(60% 80% at 85% 90%, rgba(30,80,230,.28), transparent 60%),
+    linear-gradient(160deg, #f7fbff, #e3efff);
+}
+.card-art.brand-art::before { display: none; }
+.lockup { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 28px); transition: transform 1s var(--ease-out); }
+.card:hover .lockup { transform: scale(1.04); }
+.card-art .lockup img { position: static; width: clamp(64px, 9vw, 120px); height: auto; object-fit: contain; filter: none; transform: none; }
+.lockup-name {
+  color: #0a1433; font-weight: 800; text-transform: uppercase; letter-spacing: .02em;
+  font-size: clamp(26px, 3.6vw, 48px); line-height: .95;
+}
+.card:hover .card-art .lockup img { transform: none; }

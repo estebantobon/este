@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <script>document.documentElement.classList.add('js');try{if(localStorage.getItem('motion')==='off')document.documentElement.classList.add('reduce-motion')}catch(e){}</script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/site.css?v=3">
+  <link rel="stylesheet" href="assets/css/site.css?v=4">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -38,63 +38,76 @@
       <div class="wrap">
         <p class="eyebrow reveal"><span class="dot"></span>&nbsp; Play</p>
         <h1 class="display reveal" style="--i:1;margin-top:18px">Research,<br><span class="grad-text">made visible.</span></h1>
-        <p class="lead reveal" style="--i:2;margin-top:28px">Health and biotech research I've synthesized with NotebookLM and Gemini, from peptides to hormones to metabolism, turned into visual explainers. Part research log, part sketchbook.</p>
+        <p class="lead reveal" style="--i:2;margin-top:28px">Health and biotech research I've synthesized with NotebookLM and Gemini into visual explainers, covering peptide science, endocrinology and metabolic health.</p>
       </div>
     </header>
+
+    <section class="section" style="padding-top:0" aria-labelledby="feat-h">
+      <div class="wrap feature">
+        <div class="feature-video reveal">
+          <video src="assets/media/peptide-balance-retatrutide.mp4" poster="assets/media/peptide-balance-retatrutide-poster.jpg" controls muted playsinline preload="metadata" aria-label="Peptide Balance retatrutide explainer video"></video>
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow reveal">Featured · Peptide Balance</p>
+          <h2 id="feat-h" class="h2 reveal" style="--i:1;margin-top:16px">From research<br><span class="grad-text">to product story.</span></h2>
+          <p class="lead reveal" style="--i:2;margin-top:20px">A 40-second explainer for Peptide Balance that turns the published research on retatrutide into a clear product story.</p>
+          <div class="links-row reveal" style="--i:3">
+            <a class="btn" href="https://peptidebalance.com" target="_blank" rel="noopener">peptidebalance.com <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section" style="padding-top:0" aria-labelledby="gal-h">
       <div class="wrap">
         <h2 id="gal-h" class="sr-only">Gallery</h2>
         <div class="filters reveal" role="group" aria-label="Filter gallery">
           <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="chip" type="button" data-filter="peptides" aria-pressed="false">Peptides &amp; drugs</button>
-          <button class="chip" type="button" data-filter="hormones" aria-pressed="false">Hormones</button>
-          <button class="chip" type="button" data-filter="metabolism" aria-pressed="false">Metabolism</button>
+          <button class="chip" type="button" data-filter="peptides" aria-pressed="false">Peptides &amp; therapeutics</button>
+          <button class="chip" type="button" data-filter="hormones" aria-pressed="false">Endocrinology</button>
+          <button class="chip" type="button" data-filter="metabolism" aria-pressed="false">Metabolic health</button>
         </div>
         <p class="sr-only" aria-live="polite" id="filter-status"></p>
 
         <div class="gallery">
-          <button class="tile reveal" type="button" data-cat="metabolism" style="--ar:1 / 1;--i:0" data-title="Retatrutide: a total system reset" data-desc="Metabolism · How the triple-agonist trial drug drives weight loss, and what the phase 2 data showed.">
-            <div class="tile-art"><img src="assets/play/retatrutide-system-reset-en.webp" alt="NotebookLM infographic: Retatrutide: a total system reset" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>Retatrutide: a total system reset</b><span>Metabolism</span></div>
+          <button class="tile reveal" type="button" data-cat="metabolism" style="--ar:1 / 1;--i:0" data-title="Retatrutide: a metabolic reset" data-desc="Metabolic health · How the investigational triple agonist acts on appetite and metabolism, and what the phase 2 trial reported.">
+            <div class="tile-art"><img src="assets/play/retatrutide-system-reset-en.webp" alt="NotebookLM infographic: Retatrutide: a metabolic reset" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Retatrutide: a metabolic reset</b><span>Metabolic health</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="peptides" style="--ar:16 / 9;--i:1" data-title="GHK-Cu: science vs. hype" data-desc="Peptides & drugs · The copper peptide behind skin and hair claims, separated into evidence and marketing.">
-            <div class="tile-art"><img src="assets/play/ghk-cu-science-vs-hype.webp" alt="NotebookLM infographic: GHK-Cu: science vs. hype" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>GHK-Cu: science vs. hype</b><span>Peptides & drugs</span></div>
+          <button class="tile reveal" type="button" data-cat="peptides" style="--ar:16 / 9;--i:1" data-title="GHK-Cu: evidence and claims" data-desc="Peptides &amp; therapeutics · The copper peptide studied for skin repair, separating published evidence from marketing claims.">
+            <div class="tile-art"><img src="assets/play/ghk-cu-science-vs-hype.webp" alt="NotebookLM infographic: GHK-Cu: evidence and claims" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>GHK-Cu: evidence and claims</b><span>Peptides &amp; therapeutics</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:2" data-title="Growth hormone: facts and myths" data-desc="Hormones · What GH actually does in adults, and which popular claims fall apart.">
+          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:2" data-title="Growth hormone: facts and myths" data-desc="Endocrinology · The role of growth hormone in adults, and which common claims the research supports.">
             <div class="tile-art"><img src="assets/play/growth-hormone-facts-myths.webp" alt="NotebookLM infographic: Growth hormone: facts and myths" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>Growth hormone: facts and myths</b><span>Hormones</span></div>
+            <div class="tile-meta"><b>Growth hormone: facts and myths</b><span>Endocrinology</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="peptides" style="--ar:16 / 9;--i:0" data-title="Beyond cholesterol" data-desc="Peptides & drugs · A look at peptides pitched for heart health. Several claims here are ahead of the evidence.">
-            <div class="tile-art"><img src="assets/play/beyond-cholesterol-peptides-heart.webp" alt="NotebookLM infographic: Beyond cholesterol" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>Beyond cholesterol</b><span>Peptides & drugs</span></div>
+          <button class="tile reveal" type="button" data-cat="peptides" style="--ar:16 / 9;--i:0" data-title="Peptides and cardiovascular health" data-desc="Peptides &amp; therapeutics · Peptides under study for heart health, and where the research currently stands.">
+            <div class="tile-art"><img src="assets/play/beyond-cholesterol-peptides-heart.webp" alt="NotebookLM infographic: Peptides and cardiovascular health" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Peptides and cardiovascular health</b><span>Peptides &amp; therapeutics</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:1" data-title="The TRT estrogen blueprint" data-desc="Hormones · Why estrogen matters on testosterone therapy and how it is managed.">
-            <div class="tile-art"><img src="assets/play/trt-estrogen-blueprint.webp" alt="NotebookLM infographic: The TRT estrogen blueprint" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>The TRT estrogen blueprint</b><span>Hormones</span></div>
+          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:1" data-title="Estradiol on testosterone therapy" data-desc="Endocrinology · Why estradiol matters during testosterone replacement therapy and how it is monitored.">
+            <div class="tile-art"><img src="assets/play/trt-estrogen-blueprint.webp" alt="NotebookLM infographic: Estradiol on testosterone therapy" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Estradiol on testosterone therapy</b><span>Endocrinology</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="metabolism" style="--ar:1 / 1;--i:2" data-title="Stubborn fat, an advanced guide" data-desc="Metabolism · Why some fat is slower to go, and the levers that move it.">
-            <div class="tile-art"><img src="assets/play/stubborn-fat-advanced-guide.webp" alt="NotebookLM infographic: Stubborn fat, an advanced guide" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>Stubborn fat, an advanced guide</b><span>Metabolism</span></div>
+          <button class="tile reveal" type="button" data-cat="metabolism" style="--ar:1 / 1;--i:2" data-title="Regional fat loss" data-desc="Metabolic health · The physiology behind regional fat loss and the factors that influence it.">
+            <div class="tile-art"><img src="assets/play/stubborn-fat-advanced-guide.webp" alt="NotebookLM infographic: Regional fat loss" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Regional fat loss</b><span>Metabolic health</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="peptides" style="--ar:16 / 9;--i:0" data-title="Tadalafil, a deep dive" data-desc="Peptides & drugs · Beyond its label: blood flow, prostate and off-label uses.">
-            <div class="tile-art"><img src="assets/play/tadalafil-deep-dive.webp" alt="NotebookLM infographic: Tadalafil, a deep dive" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>Tadalafil, a deep dive</b><span>Peptides & drugs</span></div>
+          <button class="tile reveal" type="button" data-cat="peptides" style="--ar:16 / 9;--i:0" data-title="Tadalafil: a clinical overview" data-desc="Peptides &amp; therapeutics · A PDE5 inhibitor’s vascular effects, its approved uses, and areas of ongoing research.">
+            <div class="tile-art"><img src="assets/play/tadalafil-deep-dive.webp" alt="NotebookLM infographic: Tadalafil: a clinical overview" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Tadalafil: a clinical overview</b><span>Peptides &amp; therapeutics</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:1" data-title="Estrogen control on TRT" data-desc="Hormones · Balancing estradiol without crashing it.">
-            <div class="tile-art"><img src="assets/play/estrogen-control-on-trt.webp" alt="NotebookLM infographic: Estrogen control on TRT" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>Estrogen control on TRT</b><span>Hormones</span></div>
+          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:1" data-title="Managing estradiol on TRT" data-desc="Endocrinology · Keeping estradiol in a healthy range during testosterone therapy.">
+            <div class="tile-art"><img src="assets/play/estrogen-control-on-trt.webp" alt="NotebookLM infographic: Managing estradiol on TRT" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>Managing estradiol on TRT</b><span>Endocrinology</span></div>
           </button>
-          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:2" data-title="A holistic TRT roadmap" data-desc="Hormones · Labs, lifestyle and monitoring before and during therapy.">
-            <div class="tile-art"><img src="assets/play/holistic-trt-roadmap.webp" alt="NotebookLM infographic: A holistic TRT roadmap" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>A holistic TRT roadmap</b><span>Hormones</span></div>
-          </button>
-          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:0" data-title="The natural foundation" data-desc="Hormones · Dorian Yates on building a natural base before TRT or enhancement.">
-            <div class="tile-art"><img src="assets/play/dorian-yates-natural-foundation.webp" alt="NotebookLM infographic: The natural foundation" loading="lazy" decoding="async"></div>
-            <div class="tile-meta"><b>The natural foundation</b><span>Hormones</span></div>
+          <button class="tile reveal" type="button" data-cat="hormones" style="--ar:16 / 9;--i:2" data-title="A holistic approach to TRT" data-desc="Endocrinology · Labs, lifestyle and clinical monitoring before and during therapy.">
+            <div class="tile-art"><img src="assets/play/holistic-trt-roadmap.webp" alt="NotebookLM infographic: A holistic approach to TRT" loading="lazy" decoding="async"></div>
+            <div class="tile-meta"><b>A holistic approach to TRT</b><span>Endocrinology</span></div>
           </button>
         </div>
+        <p class="placeholder-note">Educational summaries of published research and expert discussion. Not medical advice.</p>
       </div>
     </section>
   </main>
@@ -122,7 +135,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/site.js?v=3" defer></script>
-  <script src="assets/js/play.js?v=3" defer></script>
+  <script src="assets/js/site.js?v=4" defer></script>
+  <script src="assets/js/play.js?v=4" defer></script>
 </body>
 </html>
