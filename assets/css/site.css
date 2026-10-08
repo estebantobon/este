@@ -530,15 +530,17 @@ a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
   .lb-bar { flex-direction: column; align-items: flex-start; }
 }
 
-/* ---------- Reduced motion ---------- */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
-  .js .reveal { opacity: 1; transform: none; filter: none; }
-  .statement .w { opacity: 1; }
-  .hero { height: auto; }
-  .hero-stage { position: relative; }
-  .glow { display: none; }
-}
+/* ---------- Reduced motion ----------
+   Motion is on by default (it is the point of the site). Visitors can turn it
+   off with the footer toggle, which sets html.reduce-motion. */
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+.js.reduce-motion .reveal { opacity: 1; transform: none; filter: none; }
+.reduce-motion .statement .w { opacity: 1; }
+.reduce-motion .hero { height: auto; }
+.reduce-motion .hero-stage { position: relative; }
+.reduce-motion .glow { display: none; }
+.motion-toggle { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.motion-toggle:hover { color: var(--fg); }
 .lightbox:has(img) { width: min(1280px, 94vw); }
 .lb-art:has(img) { aspect-ratio: auto; height: min(74vh, 720px); background: #000; }
 .lb-art img { object-fit: contain; }
