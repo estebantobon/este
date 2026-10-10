@@ -175,6 +175,7 @@ body.leaving { opacity: 0; transition: opacity .35s ease; }
   background: rgba(255,255,255,.04);
   transition: background .3s, border-color .3s, transform .4s var(--ease-spring);
 }
+.btn-ico { width: 18px; height: 18px; flex: none; }
 .btn:hover { background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.2); transform: translateY(-2px); }
 .btn-grad { position: relative; border: 0; background: var(--fg); color: var(--bg); }
 .btn-grad:hover { background: var(--fg); }
