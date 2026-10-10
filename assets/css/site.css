@@ -183,8 +183,6 @@ body.leaving { opacity: 0; transition: opacity .35s ease; }
   background: var(--grad); filter: blur(14px); opacity: .55; transition: opacity .3s;
 }
 .btn-grad:hover::before { opacity: .9; }
-.arrow { transition: transform .4s var(--ease-spring); }
-a:hover > .arrow, button:hover > .arrow { transform: translate(3px, -3px); }
 
 /* ---------- Hero (index) ---------- */
 .hero { position: relative; height: 520vh; }
