@@ -1,0 +1,156 @@
+/* Brief to Motion: a brief goes in, a scene plan comes back, the engine plays it.
+   Scoped under .btm so it can drop into any page of the site. Uses the site tokens
+   when present and falls back to the same values when shown on its own. */
+
+.btm {
+  --btm-bg: var(--bg, #0E0E0E);
+  --btm-raised: var(--bg-raised, #151517);
+  --btm-fg: var(--fg, #FFFFFF);
+  --btm-muted: var(--muted, #A1A1A8);
+  --btm-faint: var(--faint, #6B6B73);
+  --btm-line: var(--line, rgba(255, 255, 255, 0.09));
+  --btm-baby: var(--baby, #A8DCFF);
+  --btm-blue: var(--blue, #3D6BFF);
+  --btm-purple: var(--purple, #8E5CF7);
+  --btm-pink: var(--pink, #F472B6);
+  --btm-grad: linear-gradient(100deg, var(--btm-baby) 0%, var(--btm-blue) 34%, var(--btm-purple) 66%, var(--btm-pink) 100%);
+  --btm-font: var(--font, "Helvetica Neue", Helvetica, Arial, sans-serif);
+  --btm-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --btm-radius: var(--radius, 22px);
+  --btm-ease: cubic-bezier(.16, 1, .3, 1);
+  color: var(--btm-fg);
+  font-family: var(--btm-font);
+}
+
+.btm * { box-sizing: border-box; }
+
+.btm-head { display: grid; gap: 14px; max-width: 760px; }
+.btm-eyebrow {
+  margin: 0; font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--btm-muted); display: flex; align-items: center; gap: 10px;
+}
+.btm-live-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--btm-pink);
+  box-shadow: 0 0 0 0 rgba(244, 114, 182, .6); animation: btm-ping 2.2s var(--btm-ease) infinite;
+}
+@keyframes btm-ping { 0% { box-shadow: 0 0 0 0 rgba(244,114,182,.55) } 80%,100% { box-shadow: 0 0 0 10px rgba(244,114,182,0) } }
+.btm-title {
+  margin: 0; font-weight: 700; letter-spacing: -.035em; line-height: .98;
+  font-size: clamp(40px, 7vw, 84px); text-wrap: balance;
+}
+.btm-grad { background: var(--btm-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.btm-lead { margin: 0; color: var(--btm-muted); font-size: clamp(16px, 1.6vw, 19px); line-height: 1.55; max-width: 62ch; }
+
+.btm-grid {
+  margin-top: clamp(28px, 4vw, 48px);
+  display: grid; gap: 20px;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  align-items: start;
+}
+@media (max-width: 900px) { .btm-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Stage */
+.btm-stage-wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; min-width: 0; }
+.btm-stage {
+  position: relative; width: 100%; aspect-ratio: 16 / 9; max-width: 100%;
+  border-radius: var(--btm-radius); overflow: hidden; background: #000;
+  box-shadow: 0 0 0 1px var(--btm-line), 0 40px 120px -40px rgba(61, 107, 255, .35);
+}
+.btm-stage canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.btm-hud {
+  position: absolute; left: 14px; right: 14px; top: 12px;
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  pointer-events: none;
+}
+.btm-chip {
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.78);
+  background: rgba(14,14,14,.55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.1); border-radius: 999px; padding: 6px 11px; white-space: nowrap;
+}
+.btm-stage-btns { position: absolute; right: 12px; bottom: 12px; display: flex; gap: 8px; }
+.btm-icon {
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(14,14,14,.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.14); color: #fff; cursor: pointer;
+  transition: transform .3s var(--btm-ease), background .2s;
+}
+.btm-icon:hover { transform: scale(1.06); background: rgba(40,40,46,.75); }
+.btm-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.btm-progress { position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: var(--btm-grad); }
+
+/* Brief form */
+.btm-form {
+  display: flex; gap: 8px; padding: 6px; border-radius: 999px;
+  background: var(--btm-raised); border: 1px solid var(--btm-line);
+  transition: border-color .25s;
+}
+.btm-form:focus-within { border-color: rgba(168, 220, 255, .45); }
+.btm-input {
+  flex: 1; min-width: 0; background: transparent; border: 0; outline: 0;
+  color: var(--btm-fg); font: inherit; font-size: 16px; padding: 10px 14px;
+}
+.btm-input::placeholder { color: var(--btm-faint); }
+.btm-go {
+  flex: none; border: 0; border-radius: 999px; padding: 0 22px; min-height: 44px;
+  font: inherit; font-weight: 600; font-size: 15px; color: #0E0E0E; cursor: pointer;
+  background: var(--btm-grad); background-size: 160% 100%; background-position: 0 0;
+  transition: background-position .6s var(--btm-ease), transform .3s var(--btm-ease), opacity .2s;
+}
+.btm-go:hover { background-position: 100% 0; transform: translateY(-1px); }
+.btm-go:disabled { opacity: .55; cursor: progress; transform: none; }
+.btm-examples { display: flex; flex-wrap: wrap; gap: 8px; }
+.btm-ex {
+  border: 1px solid var(--btm-line); background: transparent; color: var(--btm-muted);
+  border-radius: 999px; padding: 8px 13px; font: inherit; font-size: 13px; cursor: pointer;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.btm-ex:hover { color: var(--btm-fg); border-color: rgba(255,255,255,.28); background: rgba(255,255,255,.03); }
+.btm-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; font-size: 13px; color: var(--btm-faint); }
+.btm-meta strong { color: var(--btm-muted); font-weight: 500; }
+
+/* Director's desk */
+.btm-desk {
+  min-width: 0; border-radius: var(--btm-radius); background: var(--btm-raised);
+  border: 1px solid var(--btm-line); padding: 20px; display: grid; gap: 16px;
+}
+.btm-desk-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.btm-desk h3 { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: -.01em; }
+.btm-source { font-size: 12px; color: var(--btm-muted); white-space: nowrap; }
+.btm-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.btm-step { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--btm-faint); transition: color .3s; }
+.btm-step i {
+  flex: none; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid currentColor; position: relative;
+}
+.btm-step.is-active { color: var(--btm-fg); }
+.btm-step.is-active i { border-color: var(--btm-baby); border-top-color: transparent; animation: btm-spin .8s linear infinite; }
+.btm-step.is-done { color: var(--btm-muted); }
+.btm-step.is-done i { border: 0; background: var(--btm-grad); }
+.btm-step.is-done i::after {
+  content: ""; position: absolute; left: 4.5px; top: 2.5px; width: 3px; height: 6px;
+  border: solid #0E0E0E; border-width: 0 1.6px 1.6px 0; transform: rotate(45deg);
+}
+@keyframes btm-spin { to { transform: rotate(360deg) } }
+.btm-code {
+  margin: 0; font-family: var(--btm-mono); font-size: 12px; line-height: 1.6;
+  background: #0A0A0B; border: 1px solid var(--btm-line); border-radius: 14px;
+  padding: 14px; height: 300px; overflow: auto; white-space: pre-wrap; word-break: break-word; color: #C9C9D1;
+}
+.btm-code .k { color: var(--btm-baby); }
+.btm-code .s { color: #F5B8D8; }
+.btm-code .n { color: #C4B1FF; }
+.btm-caret { display: inline-block; width: 7px; height: 13px; background: var(--btm-baby); vertical-align: -2px; animation: btm-blink 1s steps(2) infinite; }
+@keyframes btm-blink { 50% { opacity: 0 } }
+.btm-notes { margin: 0; font-size: 14px; line-height: 1.55; color: var(--btm-muted); min-height: 2.6em; }
+.btm-notes b { color: var(--btm-fg); font-weight: 500; }
+
+/* How it works */
+.btm-how { margin-top: 20px; display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 900px) { .btm-how { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .btm-how { grid-template-columns: minmax(0, 1fr); } }
+.btm-how div { border-top: 1px solid var(--btm-line); padding-top: 14px; min-width: 0; }
+.btm-how span { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--btm-faint); font-variant-numeric: tabular-nums; }
+.btm-how strong { display: block; margin-top: 8px; font-size: 15px; font-weight: 600; }
+.btm-how p { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: var(--btm-muted); }
+
+.btm :focus-visible { outline: 2px solid var(--btm-baby); outline-offset: 3px; }
+.btm .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

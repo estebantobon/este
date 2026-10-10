@@ -1,0 +1,66 @@
+<section class="btm" id="brief-to-motion" aria-labelledby="btm-h">
+  <header class="btm-head">
+    <p class="btm-eyebrow"><span class="btm-live-dot" aria-hidden="true"></span>Play · Live experiment</p>
+    <h2 class="btm-title" id="btm-h">Brief <span class="btm-grad">to Motion</span></h2>
+    <p class="btm-lead">Describe a scene in one sentence. Claude writes the shot list, and an engine I built turns that plan into motion and an original score, live in your browser.</p>
+  </header>
+
+  <div class="btm-grid">
+    <div class="btm-stage-wrap">
+      <div class="btm-stage">
+        <canvas id="btm-canvas" role="img" aria-label="Animated title sequence"></canvas>
+        <div class="btm-hud" aria-hidden="true">
+          <span class="btm-chip" id="btm-shot">Demo reel</span>
+          <span class="btm-chip" id="btm-tempo">96 BPM</span>
+        </div>
+        <div class="btm-stage-btns">
+          <button class="btm-icon" id="btm-replay" type="button" aria-label="Replay">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/></svg>
+          </button>
+          <button class="btm-icon" id="btm-sound" type="button" aria-label="Turn sound off" aria-pressed="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="btm-wave" d="M15.5 9a4 4 0 0 1 0 6"/><path class="btm-wave" d="M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="btm-x" d="M16 9.5l5 5M21 9.5l-5 5" style="display:none"/></svg>
+          </button>
+        </div>
+        <div class="btm-progress" id="btm-progress"></div>
+      </div>
+
+      <form class="btm-form" id="btm-form" autocomplete="off">
+        <label class="sr" for="btm-brief">Your brief</label>
+        <input class="btm-input" id="btm-brief" name="brief" maxlength="160" placeholder="A calm launch film for a sleep app" required>
+        <button class="btm-go" id="btm-go" type="submit">Direct it</button>
+      </form>
+      <div class="btm-examples" aria-label="Example briefs">
+        <button class="btm-ex" type="button">Trailer for a quantum computing startup</button>
+        <button class="btm-ex" type="button">Calm intro for a wellness clinic</button>
+        <button class="btm-ex" type="button">Hype reel for a Friday night pickup league</button>
+        <button class="btm-ex" type="button">Year in review: 12 projects shipped</button>
+      </div>
+      <div class="btm-meta">
+        <span id="btm-quota"><strong>Live:</strong> 5 runs per visitor per day</span>
+        <span>Sound on. Best with headphones.</span>
+      </div>
+    </div>
+
+    <aside class="btm-desk" aria-labelledby="btm-desk-h">
+      <div class="btm-desk-top">
+        <h3 id="btm-desk-h">Director's desk</h3>
+        <span class="btm-source" id="btm-source">Demo plan</span>
+      </div>
+      <ol class="btm-steps" id="btm-steps">
+        <li class="btm-step is-done"><i></i>Read the brief</li>
+        <li class="btm-step is-done"><i></i>Choose mood and tempo</li>
+        <li class="btm-step is-done"><i></i>Block the shots</li>
+        <li class="btm-step is-done"><i></i>Score the sound</li>
+      </ol>
+      <pre class="btm-code" id="btm-code" aria-label="Scene plan JSON"></pre>
+      <p class="btm-notes" id="btm-notes" aria-live="polite"></p>
+    </aside>
+  </div>
+
+  <div class="btm-how">
+    <div><span>01</span><strong>Brief to plan</strong><p>Claude turns your sentence into a JSON shot list that follows a strict schema.</p></div>
+    <div><span>02</span><strong>Plan to motion</strong><p>A canvas engine renders seven shot types, cut on the beat.</p></div>
+    <div><span>03</span><strong>Plan to sound</strong><p>Web Audio synthesizes a score in the plan's key and tempo. No audio files.</p></div>
+    <div><span>04</span><strong>Guardrails</strong><p>Every plan is validated before it plays. Live runs are capped per visitor, with an offline director as backup.</p></div>
+  </div>
+</section>
