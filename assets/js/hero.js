@@ -69,14 +69,14 @@
   const pos = new Float32Array(N * 3), vel = new Float32Array(N * 3);
   const delay = new Float32Array(N), size = new Float32Array(N);
   const col = [];
-  const stops = [[168, 220, 255], [61, 107, 255], [142, 92, 247], [244, 114, 182]];
+  const stops = [[168, 220, 255], [142, 92, 247]];
   for (let i = 0; i < N; i++) {
     for (let k = 0; k < 3; k++) pos[i * 3 + k] = (rng() - 0.5) * 16; // start scattered
     delay[i] = rng();
     size[i] = 0.9 + rng() * 1.4;
     // colour follows height on the sphere, so the gradient reads as one sweep
     const t = Math.min(0.999, Math.max(0, (forms[0][i * 3 + 1] / 2.2 + 1) / 2 * 0.9 + rng() * 0.1));
-    const s = t * 3, j = Math.floor(s), f = s - j, A = stops[j], B = stops[j + 1];
+    const s = t * (stops.length - 1), j = Math.floor(s), f = s - j, A = stops[j], B = stops[j + 1];
     col.push(`rgb(${A.map((v, k) => Math.round(v + (B[k] - v) * f)).join(',')})`);
   }
 

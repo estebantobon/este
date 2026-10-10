@@ -1,5 +1,5 @@
 /* estebantobon.dev design system
-   One typeface, one background, one four-stop gradient. */
+   One typeface, one background, one soft two-tone gradient used sparingly. */
 
 :root {
   --bg: #0E0E0E;
@@ -12,9 +12,7 @@
   --baby: #A8DCFF;
   --blue: #3D6BFF;
   --purple: #8E5CF7;
-  --pink: #F472B6;
-  --grad: linear-gradient(100deg, var(--baby) 0%, var(--blue) 34%, var(--purple) 66%, var(--pink) 100%);
-  --grad-soft: linear-gradient(100deg, rgba(168,220,255,.16), rgba(61,107,255,.16), rgba(142,92,247,.16), rgba(244,114,182,.16));
+  --grad: linear-gradient(100deg, var(--baby) 0%, var(--purple) 100%);
 
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --ease-out: cubic-bezier(.16, 1, .3, 1);
@@ -181,9 +179,9 @@ body.leaving { opacity: 0; transition: opacity .35s ease; }
 .btn-grad:hover { background: var(--fg); }
 .btn-grad::before {
   content: ""; position: absolute; inset: -2px; z-index: -1; border-radius: inherit;
-  background: var(--grad); filter: blur(14px); opacity: .55; transition: opacity .3s;
+  background: var(--grad); filter: blur(16px); opacity: 0; transition: opacity .4s;
 }
-.btn-grad:hover::before { opacity: .9; }
+.btn-grad:hover::before { opacity: .35; }
 
 /* ---------- Hero (index) ---------- */
 .hero { position: relative; height: 520vh; }
@@ -249,11 +247,11 @@ body.leaving { opacity: 0; transition: opacity .35s ease; }
 .reel {
   position: relative; border-radius: var(--radius); overflow: hidden;
   aspect-ratio: 4 / 5; background: var(--bg-raised);
-  box-shadow: 0 40px 120px rgba(61,107,255,.18);
+  box-shadow: 0 40px 120px rgba(142,92,247,.12);
 }
 .reel::before {
   content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; padding: 1px; pointer-events: none;
-  background: linear-gradient(140deg, rgba(168,220,255,.6), rgba(142,92,247,.25) 40%, transparent 60%, rgba(244,114,182,.5));
+  background: linear-gradient(140deg, rgba(168,220,255,.45), rgba(142,92,247,.2) 40%, transparent 60%, rgba(142,92,247,.3));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude;
 }
@@ -370,6 +368,8 @@ body.leaving { opacity: 0; transition: opacity .35s ease; }
 .footer { padding: 32px 0 40px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); position: relative; z-index: 1; }
 .footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .footer a:hover { color: var(--fg); }
+.ico-link { display: inline-flex; align-items: center; gap: 6px; }
+.ico-link .ico { width: 14px; height: 14px; flex: none; }
 .footer ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
 
 /* ---------- Page heroes (Play, Me) ---------- */
@@ -377,9 +377,9 @@ body.leaving { opacity: 0; transition: opacity .35s ease; }
 .orb {
   position: absolute; z-index: 0; border-radius: 50%; filter: blur(70px); opacity: .55; pointer-events: none;
 }
-.orb-a { width: 46vw; height: 46vw; right: -10vw; top: -14vw; background: radial-gradient(circle, var(--purple), transparent 65%); }
-.orb-b { width: 36vw; height: 36vw; left: -12vw; top: 18vw; background: radial-gradient(circle, var(--blue), transparent 65%); opacity: .4; }
-.orb-c { width: 28vw; height: 28vw; right: 18vw; top: 26vw; background: radial-gradient(circle, var(--pink), transparent 65%); opacity: .35; }
+.orb-a { width: 46vw; height: 46vw; right: -10vw; top: -14vw; background: radial-gradient(circle, var(--purple), transparent 65%); opacity: .4; }
+.orb-b { width: 36vw; height: 36vw; left: -12vw; top: 18vw; background: radial-gradient(circle, var(--baby), transparent 65%); opacity: .22; }
+.orb-c { width: 28vw; height: 28vw; right: 18vw; top: 26vw; background: radial-gradient(circle, var(--purple), transparent 65%); opacity: .18; }
 
 /* ---------- Play ---------- */
 .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
@@ -403,21 +403,6 @@ body.leaving { opacity: 0; transition: opacity .35s ease; }
 .tile-art { position: relative; aspect-ratio: var(--ar, 4 / 5); overflow: hidden; }
 .tile-art > * { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease-out); }
 .tile:hover .tile-art > * { transform: scale(1.06); }
-.art {
-  background:
-    conic-gradient(from calc(var(--h) * 1deg) at 30% 70%, var(--baby), var(--blue), var(--purple), var(--pink), var(--baby));
-  filter: saturate(1.1);
-}
-.art::before, .art::after { content: ""; position: absolute; inset: 0; }
-.art::before { background: radial-gradient(circle at 70% 30%, rgba(14,14,14,0) 0, rgba(14,14,14,.85) 70%); }
-.art::after {
-  opacity: .5; mix-blend-mode: overlay;
-  background: repeating-radial-gradient(circle at 70% 30%, rgba(255,255,255,.25) 0 1px, transparent 1px 14px);
-}
-.art.v2 { background: linear-gradient(calc(var(--h) * 1deg), var(--blue), var(--purple) 45%, var(--pink)); }
-.art.v2::after { background: repeating-linear-gradient(90deg, rgba(255,255,255,.18) 0 1px, transparent 1px 22px); opacity: .6; }
-.art.v3 { background: radial-gradient(circle at 50% 50%, var(--pink), var(--purple) 30%, var(--blue) 60%, #0E0E0E 80%); }
-.art.v3::after { background: repeating-conic-gradient(from 0deg, rgba(255,255,255,.14) 0 2deg, transparent 2deg 12deg); opacity: .7; }
 .tile-meta { padding: 16px 18px 18px; }
 .tile-meta b { display: block; font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
 .tile-meta span { font-size: 14px; color: var(--muted); }
@@ -463,7 +448,7 @@ body.leaving { opacity: 0; transition: opacity .35s ease; }
 .portrait img { object-fit: cover; }
 .portrait-ph {
   position: absolute; inset: 0; display: grid; place-items: center; text-align: center;
-  background: radial-gradient(circle at 30% 20%, rgba(168,220,255,.35), transparent 50%), radial-gradient(circle at 80% 90%, rgba(244,114,182,.35), transparent 55%), var(--bg-raised);
+  background: radial-gradient(circle at 30% 20%, rgba(168,220,255,.35), transparent 50%), radial-gradient(circle at 80% 90%, rgba(142,92,247,.3), transparent 55%), var(--bg-raised);
   color: var(--muted); font-size: 14px;
 }
 .portrait-ph b { display: block; font-size: 96px; letter-spacing: -.05em; color: var(--fg); line-height: 1; margin-bottom: 8px; }
