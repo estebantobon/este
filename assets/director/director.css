@@ -12,8 +12,8 @@
   --btm-baby: var(--baby, #A8DCFF);
   --btm-blue: var(--blue, #3D6BFF);
   --btm-purple: var(--purple, #8E5CF7);
-  --btm-pink: var(--pink, #F472B6);
-  --btm-grad: linear-gradient(100deg, var(--btm-baby) 0%, var(--btm-blue) 34%, var(--btm-purple) 66%, var(--btm-pink) 100%);
+  /* One soft two-stop blend, used sparingly. Solid blue where a solid color is needed. */
+  --btm-grad: linear-gradient(100deg, var(--btm-baby) 0%, var(--btm-purple) 100%);
   --btm-font: var(--font, "Helvetica Neue", Helvetica, Arial, sans-serif);
   --btm-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --btm-radius: var(--radius, 22px);
@@ -30,15 +30,14 @@
   color: var(--btm-muted); display: flex; align-items: center; gap: 10px;
 }
 .btm-live-dot {
-  width: 8px; height: 8px; border-radius: 50%; background: var(--btm-pink);
-  box-shadow: 0 0 0 0 rgba(244, 114, 182, .6); animation: btm-ping 2.2s var(--btm-ease) infinite;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--btm-baby);
+  box-shadow: 0 0 0 0 rgba(168, 220, 255, .6); animation: btm-ping 2.2s var(--btm-ease) infinite;
 }
-@keyframes btm-ping { 0% { box-shadow: 0 0 0 0 rgba(244,114,182,.55) } 80%,100% { box-shadow: 0 0 0 10px rgba(244,114,182,0) } }
+@keyframes btm-ping { 0% { box-shadow: 0 0 0 0 rgba(168,220,255,.5) } 80%,100% { box-shadow: 0 0 0 10px rgba(168,220,255,0) } }
 .btm-title {
   margin: 0; font-weight: 700; letter-spacing: -.035em; line-height: .98;
   font-size: clamp(40px, 7vw, 84px); text-wrap: balance;
 }
-.btm-grad { background: var(--btm-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .btm-lead { margin: 0; color: var(--btm-muted); font-size: clamp(16px, 1.6vw, 19px); line-height: 1.55; max-width: 62ch; }
 
 .btm-grid {
@@ -92,11 +91,11 @@
 .btm-input::placeholder { color: var(--btm-faint); }
 .btm-go {
   flex: none; border: 0; border-radius: 999px; padding: 0 22px; min-height: 44px;
-  font: inherit; font-weight: 600; font-size: 15px; color: #0E0E0E; cursor: pointer;
-  background: var(--btm-grad); background-size: 160% 100%; background-position: 0 0;
-  transition: background-position .6s var(--btm-ease), transform .3s var(--btm-ease), opacity .2s;
+  font: inherit; font-weight: 600; font-size: 15px; color: #FFFFFF; cursor: pointer;
+  background: var(--btm-blue);
+  transition: background .25s, transform .3s var(--btm-ease), opacity .2s;
 }
-.btm-go:hover { background-position: 100% 0; transform: translateY(-1px); }
+.btm-go:hover { background: #5580FF; transform: translateY(-1px); }
 .btm-go:disabled { opacity: .55; cursor: progress; transform: none; }
 .btm-examples { display: flex; flex-wrap: wrap; gap: 8px; }
 .btm-ex {
@@ -124,7 +123,7 @@
 .btm-step.is-active { color: var(--btm-fg); }
 .btm-step.is-active i { border-color: var(--btm-baby); border-top-color: transparent; animation: btm-spin .8s linear infinite; }
 .btm-step.is-done { color: var(--btm-muted); }
-.btm-step.is-done i { border: 0; background: var(--btm-grad); }
+.btm-step.is-done i { border: 0; background: var(--btm-fg); }
 .btm-step.is-done i::after {
   content: ""; position: absolute; left: 4.5px; top: 2.5px; width: 3px; height: 6px;
   border: solid #0E0E0E; border-width: 0 1.6px 1.6px 0; transform: rotate(45deg);
@@ -136,7 +135,7 @@
   padding: 14px; height: 300px; overflow: auto; white-space: pre-wrap; word-break: break-word; color: #C9C9D1;
 }
 .btm-code .k { color: var(--btm-baby); }
-.btm-code .s { color: #F5B8D8; }
+.btm-code .s { color: #E6E6EC; }
 .btm-code .n { color: #C4B1FF; }
 .btm-caret { display: inline-block; width: 7px; height: 13px; background: var(--btm-baby); vertical-align: -2px; animation: btm-blink 1s steps(2) infinite; }
 @keyframes btm-blink { 50% { opacity: 0 } }

@@ -11,15 +11,14 @@
   // ---------------------------------------------------------------- plan schema
 
   const PALETTE = {
-    baby: '#A8DCFF', blue: '#3D6BFF', purple: '#8E5CF7', pink: '#F472B6',
-    mint: '#7CF2C8', amber: '#FFC56B', white: '#FFFFFF'
+    baby: '#A8DCFF', blue: '#3D6BFF', purple: '#8E5CF7', lilac: '#C9B8FF', white: '#FFFFFF'
   };
   const KINDS = ['type-slam', 'particle-word', 'orbit-rings', 'grid-wave', 'ribbon-flow', 'split-reveal', 'counter'];
   const MOODS = ['calm', 'bold', 'cinematic', 'playful', 'tense'];
   const MOOD_BPM = { calm: 72, bold: 124, cinematic: 92, playful: 116, tense: 104 };
   const MOOD_COLORS = {
-    calm: ['baby', 'mint', 'blue'], bold: ['blue', 'purple', 'pink'], cinematic: ['purple', 'blue', 'amber'],
-    playful: ['pink', 'amber', 'baby'], tense: ['purple', 'pink', 'white']
+    calm: ['baby', 'lilac', 'white'], bold: ['blue', 'baby', 'purple'], cinematic: ['purple', 'baby', 'blue'],
+    playful: ['baby', 'lilac', 'purple'], tense: ['purple', 'blue', 'white']
   };
 
   const PROMPT = (brief) => `You are the director inside "Brief to Motion", an interactive piece on Esteban Tobon's portfolio site. A visitor typed the brief below. Turn it into a scene plan for a 10 second animated title sequence that a canvas engine will render with a synthesized score.
@@ -30,7 +29,7 @@ Reply with only one JSON object, no other text, in exactly this shape:
 Rules:
 - title: the hero line, at most 28 characters. subtitle: at most 48 characters.
 - bpm between 64 and 150, matched to the mood.
-- palette: exactly 3 names from baby, blue, purple, pink, mint, amber, white.
+- palette: exactly 3 names from baby, blue, purple, lilac, white. Keep it restrained.
 - shots: 3 to 5 shots. kind is one of:
   type-slam (words slam in on the beat), particle-word (thousands of particles assemble the text, then burst), orbit-rings (rotating rings around a centered word), grid-wave (a 3D dot terrain with a lower-third caption), ribbon-flow (flowing light ribbons revealing text), split-reveal (text halves slide in from opposite sides), counter (a number counts up; text must contain the number, like "12 projects" or "99.9% uptime").
   Use at least 3 different kinds. text is at most 24 characters. beats is 2 to 8.
@@ -385,6 +384,12 @@ Rules:
     ctx.font = `${weight} ${size}px ${FONT}`;
     return size;
   }
+  // Type is always white. The palette shows up as a soft glow behind it.
+  function whiteText(colors) {
+    ctx.shadowColor = hexA(colors[0], .55);
+    ctx.shadowBlur = H * .035;
+    return '#FFFFFF';
+  }
   function gradFill(colors, x0, x1) {
     const g = ctx.createLinearGradient(x0, 0, x1, 0);
     colors.forEach((c, i) => g.addColorStop(i / (colors.length - 1), c));
@@ -454,7 +459,7 @@ Rules:
   const SHOTS = {
     title(p, shot, plan, c, pulse) {
       const s = fitFont(plan.title, W * .84, H * .15);
-      const fill = gradFill(c, W * .2, W * .8);
+      const fill = whiteText(c);
       const chars = [...plan.title];
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       const total = ctx.measureText(plan.title).width;
@@ -485,7 +490,7 @@ Rules:
       const k = ease.back(clamp01(local * 2.6));
       fitFont(shot.text, W * .86, H * .2, 800);
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      const fill = gradFill(c, W * .15, W * .85);
+      const fill = whiteText(c);
       let x = W / 2 - ctx.measureText(shot.text).width / 2;
       const out = seg(p, .9, 1);
       groups.forEach((g, i) => {
@@ -500,7 +505,7 @@ Rules:
             const gs = sc + ghost * .08 * (1 - kk);
             ctx.scale(gs, gs);
             ctx.globalAlpha = (ghost ? .12 * (1 - kk) : (isNew ? clamp01(local * 6) : 1)) * (1 - out);
-            ctx.fillStyle = ghost ? c[ghost % c.length] : fill;
+            ctx.fillStyle = ghost ? hexA(c[ghost % c.length], 1) : fill;
             ctx.fillText(g, 0, 0);
             ctx.restore();
           }
@@ -626,7 +631,7 @@ Rules:
       const k = ease.expo(seg(p, 0, .4)), out = ease.inOut(seg(p, .85, 1));
       const off = (1 - k) * W * .6 + out * W * .6;
       const cy = H / 2;
-      const fill = gradFill(c, W * .15, W * .85);
+      const fill = whiteText(c);
       for (const [dir, y0, y1] of [[-1, cy - s, cy], [1, cy, cy + s]]) {
         ctx.save(); ctx.beginPath(); ctx.rect(0, y0, W, y1 - y0); ctx.clip();
         ctx.fillStyle = fill; ctx.fillText(shot.text, W / 2 + dir * off, cy);
@@ -663,7 +668,7 @@ Rules:
       }
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       fitFont(before + target.toFixed(decimals) + after.split(' ')[0], R * 1.5, H * .16, 800);
-      ctx.fillStyle = gradFill(c, cx - R, cx + R);
+      ctx.fillStyle = whiteText(c);
       ctx.fillText(before + val + (after.split(' ')[0] || ''), cx, cy - H * .02);
       const label = after.split(' ').slice(1).join(' ');
       if (label) {
@@ -680,7 +685,7 @@ Rules:
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       const fade = 1 - seg(p, .82, 1);
       ctx.globalAlpha = k * fade;
-      ctx.fillStyle = gradFill(c, W * .2, W * .8);
+      ctx.fillStyle = whiteText(c);
       ctx.fillText(plan.closer, W / 2, H * .46 + (1 - k) * s * .4);
       ctx.globalAlpha = ease.out(seg(p, .3, .55)) * fade;
       ctx.font = `500 ${Math.round(H * .026)}px ${FONT}`; ctx.fillStyle = 'rgba(255,255,255,.6)';
@@ -770,7 +775,7 @@ Rules:
 
   const DEMO = validatePlan({
     title: 'Brief to Motion', subtitle: 'A sentence in. A film out.', mood: 'cinematic', bpm: 96,
-    palette: ['baby', 'purple', 'pink'],
+    palette: ['baby', 'purple', 'lilac'],
     shots: [
       { kind: 'particle-word', text: 'Ideas', beats: 6 },
       { kind: 'orbit-rings', text: 'Directed by Claude', beats: 5 },

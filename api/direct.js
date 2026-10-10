@@ -40,7 +40,7 @@ const EMOJI = /[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu;
 const clean = (s, max) => String(s ?? '').replace(EMOJI, '').replace(/[\u0000-\u001F\u007F]/g, ' ')
   .replace(/[—–]/g, ', ').replace(/\s+/g, ' ').trim().slice(0, max).trim();
 
-const COLORS = ['baby', 'blue', 'purple', 'pink', 'mint', 'amber', 'white'];
+const COLORS = ['baby', 'blue', 'purple', 'lilac', 'white'];
 const KINDS = ['type-slam', 'particle-word', 'orbit-rings', 'grid-wave', 'ribbon-flow', 'split-reveal', 'counter'];
 const MOODS = ['calm', 'bold', 'cinematic', 'playful', 'tense'];
 
@@ -73,7 +73,7 @@ const SYSTEM = `You are the director inside "Brief to Motion", an interactive pi
 Rules:
 - title: the hero line, at most 28 characters. subtitle: at most 48 characters.
 - mood: calm, bold, cinematic, playful or tense. bpm between 64 and 150, matched to the mood.
-- palette: exactly 3 names from baby, blue, purple, pink, mint, amber, white.
+- palette: exactly 3 names from baby, blue, purple, lilac, white. Keep it restrained.
 - shots: 3 to 5 shots, at least 3 different kinds. text at most 24 characters, beats 2 to 8.
   type-slam: words slam in on the beat. particle-word: particles assemble the text, then burst. orbit-rings: rotating rings around a centered word. grid-wave: a 3D dot terrain with a lower-third caption. ribbon-flow: flowing light ribbons revealing text. split-reveal: text halves slide in from opposite sides. counter: a number counts up, so the text must contain the number, like "12 projects" or "99.9% uptime".
 - closer: the final card, at most 32 characters.
